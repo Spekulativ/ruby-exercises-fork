@@ -1,14 +1,21 @@
 def create_favorite_hash(color, number)
+    {
+      :number => number,
+      :color => color
+    }
+
   # return a hash with the following key/value pairs:
   # key of color (as a symbol) with value of the color argument
   # key of number (as a symbol) with the value of the number argument
 end
 
 def favorite_color(favorite_list)
+ favorite_list[:color]
   # return the value of the color key
 end
 
 def favorite_number(favorite_list)
+  favorite_list.fetch(:number, 42)
   # use #fetch to return the value of the number key or 42 if the key is not found
 end
 
